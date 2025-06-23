@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,6 +15,7 @@ import {
   Send,
   Cloud
 } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 const Skills = () => {
   const [visibleBars, setVisibleBars] = useState<Set<string>>(new Set());
@@ -127,6 +127,7 @@ const Skills = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
       {/* Header */}
       <header className="pt-24 pb-16 px-4">
         <div className="container mx-auto text-center">

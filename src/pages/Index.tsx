@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import { Github, Linkedin, Mail, Code, Database, Lightbulb, MessageCircle, Phone, Bot } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [showQuickContact, setShowQuickContact] = useState(false);
@@ -61,21 +62,23 @@ const Index = () => {
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button 
-                size="lg" 
-                className="rounded-full hover:scale-105 transition-transform"
-                onClick={() => window.location.href = '/projects'}
-              >
-                View My Projects
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg" 
-                className="rounded-full hover:scale-105 transition-transform"
-                onClick={() => window.location.href = '/contact'}
-              >
-                Let's Connect
-              </Button>
+              <Link to="/projects">
+                <Button 
+                  size="lg" 
+                  className="rounded-full hover:scale-105 transition-transform"
+                >
+                  View My Projects
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="rounded-full hover:scale-105 transition-transform"
+                >
+                  Let's Connect
+                </Button>
+              </Link>
             </div>
 
             <div className="flex gap-3 mt-4">
